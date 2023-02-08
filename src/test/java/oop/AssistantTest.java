@@ -16,6 +16,16 @@ public class AssistantTest {
     Car car = new Car();
 
     @Test
+    public void itShould() {
+        ParkingLot lotA = new ParkingLot(3);
+        assistant = new Assistant(Arrays.asList(lotA));
+        assistant.getLotA().add(new Car());
+        assistant.getLotA().add(new Car());
+        assistant.getLotA().add(new Car());
+
+    }
+
+    @Test
     public void itShouldParkCarInLotAWhenLotAHasCapacity() {
         ParkingLot lotA = new ParkingLot(5);
         ParkingLot lotB = new ParkingLot(10);
