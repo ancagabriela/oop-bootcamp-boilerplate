@@ -1,6 +1,5 @@
 package oop;
 
-import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,5 +21,4 @@ class CarTest {
 
         assertFalse(car.isParked());
     }
-
 }
