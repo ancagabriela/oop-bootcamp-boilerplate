@@ -8,6 +8,10 @@ public class Car {
         isParked = true;
     }
 
+    public void retrieve() {
+        isParked = false;
+    }
+
     public boolean isParked() {
         return isParked;
     }

@@ -16,4 +16,11 @@ class CarTest {
         assertTrue(car.isParked());
     }
 
+    @Test
+    public void itShouldSetIsParkedToFalse() {
+        car.retrieve();
+
+        assertFalse(car.isParked());
+    }
+
 }
