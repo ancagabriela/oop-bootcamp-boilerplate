@@ -5,15 +5,16 @@ import java.util.List;
 
 public class ParkingLot {
 
+    private final double ACCEPTABLE_CAPACITY = 0.8;
     private List<Car> cars = new ArrayList<>();
-    private Integer capacity = 50;
+    private int capacity;
+
+    public ParkingLot(int capacity) {
+        this.capacity = capacity;
+    }
 
     public List<Car> getCars() {
         return cars;
-    }
-
-    public Integer getCapacity() {
-        return capacity;
     }
 
     public void add(Car car) {
@@ -22,5 +23,13 @@ public class ParkingLot {
 
     public boolean checkCapacity() {
         return cars.size() < capacity;
+    }
+
+    public boolean canAcceptCar() {
+        return cars.size() < capacity * ACCEPTABLE_CAPACITY;
+    }
+
+    public boolean hasCar(Car car) {
+        return cars.contains(car);
     }
 }
